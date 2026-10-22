@@ -143,11 +143,7 @@ export default function Dashboard({ onLogout }) {
                           <strong>{t.name}</strong>
                           <small>{t.meta}</small>
                         </div>
-                        <button
-                          className="sq"
-                          aria-label={'Open ' + t.name}
-                          onClick={() => setSetupDomain({ name: t.name, ext: t.ext })}
-                        ><I.Arrow width={18} height={18} /></button>
+
                       </li>
                     ))}
                   </ul>
