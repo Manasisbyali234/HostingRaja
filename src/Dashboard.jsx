@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { USER_NAME, USER_INITIALS } from './config.js'
-import * as I from './icons.jsx'
+import { useState } from 'react'
+import { USER_INITIALS } from './config.js'
 import Domains from './Domains.jsx'
 import DomainSetup from './DomainSetup.jsx'
+import * as I from './icons.jsx'
 import MyEmails from './MyEmails.jsx'
 import MyOrders from './MyOrders.jsx'
 
@@ -15,20 +15,13 @@ const stats = [
   { icon: I.Box, label: 'Others', value: 0 },
 ]
 
-const todos = {
-  product: [
-    { name: 'mahalaxmiimplements.com', meta: 'Domain Names - .com', ext: '.com' },
-  ],
-  account: [
-    { name: 'Verify your phone number', meta: 'Account security' },
-    { name: 'Add billing address', meta: 'Billing' },
-  ],
-}
+const todos = [
+  { name: 'mahalaxmiimplements.com', meta: 'Domain Names - .com', ext: '.com' },
+]
 
 const perks = ['Domain Validation', 'Up to 256-bit Encryption', '99.9% Browser Compatibility', 'Same Day Activation']
 
 export default function Dashboard({ onLogout }) {
-  const [tab, setTab] = useState('product')
   const [collapsed, setCollapsed] = useState(false)
   const [open, setOpen] = useState(true)
   const [billingOpen, setBillingOpen] = useState(false)
@@ -143,17 +136,8 @@ export default function Dashboard({ onLogout }) {
                     <span className="muted">2/6 completed</span>
                   </div>
 
-                  <div className="tabs">
-                    <button className={tab === 'product' ? 'on' : ''} onClick={() => setTab('product')}>
-                      Product setup <i className="badge red">{todos.product.length}</i>
-                    </button>
-                    <button className={tab === 'account' ? 'on' : ''} onClick={() => setTab('account')}>
-                      Account setup <i className="badge gray">{todos.account.length}</i>
-                    </button>
-                  </div>
-
                   <ul className="todo-list">
-                    {todos[tab].map((t) => (
+                    {todos.map((t) => (
                       <li key={t.name}>
                         <div>
                           <strong>{t.name}</strong>
@@ -184,7 +168,7 @@ export default function Dashboard({ onLogout }) {
                     ))}
                   </ul>
                   <p className="muted small-text">Need help securing your domains?</p>
-                  <button className="btn-grad wide"><I.Bubble width={16} height={16} /> Talk to Raja</button>
+                  
                 </div>
               </section>
             </>
