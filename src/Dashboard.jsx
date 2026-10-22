@@ -7,7 +7,7 @@ import MyEmails from './MyEmails.jsx'
 import MyOrders from './MyOrders.jsx'
 
 const stats = [
-  { icon: I.Globe, label: 'Domains', value: 29 },
+  { icon: I.Globe, label: 'Domains', value: 0 },
   { icon: I.Server, label: 'Hosting', value: 0 },
   { icon: I.Layout, label: 'Websites', value: 0 },
   { icon: I.Mail, label: 'Emails', value: 0 },
@@ -78,8 +78,6 @@ export default function Dashboard({ onLogout }) {
             {open && !collapsed && (
               <div className="sub">
                 <a className={page === 'domains' ? 'sub-active' : ''} onClick={() => setPage('domains')}>Domains</a>
-                <a>Hosting</a>
-                <a>SSL Certificates</a>
               </div>
             )}
             <a className="nav" onClick={() => setBillingOpen(!billingOpen)}>
@@ -124,7 +122,7 @@ export default function Dashboard({ onLogout }) {
           ) : (
             <>
               <div className="welcome">
-                <h2>Welcome, {USER_NAME}</h2>
+                <h2>Welcome, mahalaxmiimplements</h2>
                 <button className="btn-dark"><I.Chat /> Manage support tickets</button>
               </div>
 

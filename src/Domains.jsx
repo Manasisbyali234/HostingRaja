@@ -2,17 +2,7 @@ import React, { useState } from 'react'
 import * as I from './icons.jsx'
 import DomainManage from './DomainManage.jsx'
 
-const ALL_DOMAINS = [
-  { name: 'brdskadapatti.com',             ext: '.com',   renewal: '13/04/2027', status: 'Active'  },
-  { name: 'shrijyothicabs.co.in',          ext: '.co.in', renewal: '07/04/2027', status: 'Active'  },
-  { name: 'shilpaamrutaenterprises.co.in', ext: '.co.in', renewal: '07/04/2027', status: 'Active'  },
-  { name: 'adityapolypack.com',            ext: '.com',   renewal: '04/04/2027', status: 'Active'  },
-  { name: 'srimahan.com',                  ext: '.com',   renewal: '16/11/2031', status: 'Active'  },
-  { name: 'mahalaxmiimplements.com',       ext: '.com',   renewal: '18/06/2027', status: 'Active'  },
-  { name: 'fmghubli.com',                  ext: '.com',   renewal: '27/03/2027', status: 'Active'  },
-  { name: 'mahalaxmiimplements.com',       ext: '.com',   renewal: '21/10/2026', status: 'Pending' },
-  { name: 'karibasaveshwaragriindia.com',  ext: '.com',   renewal: '21/08/2027', status: 'Active'  },
-]
+const ALL_DOMAINS = []
 
 const FILTERS = ['All', 'Active', 'Cancelled', 'Pending Cancellation']
 
